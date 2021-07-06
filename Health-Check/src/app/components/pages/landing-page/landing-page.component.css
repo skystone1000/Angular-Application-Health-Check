@@ -1,0 +1,14 @@
+.bg {
+    background-image: url("../../../../assets/bg.png");
+    background-color: #cccccc;
+}
+
+.fill {
+    padding-top: 9%;
+    padding-bottom: 22%;
+}
+
+.imgbr {
+    width: 80%;
+    padding-top: 8%;
+}
