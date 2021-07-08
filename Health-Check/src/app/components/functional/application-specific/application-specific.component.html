@@ -1,8 +1,80 @@
 <div class="row">
-    <div class="col-3">
+    <div class="col-2">
         <app-side-nav></app-side-nav>
     </div>
-    <div class="col-9">
+    <div class="col-10">
+        <br>
+        <div class="row">
+            <div class="col-md-10">
+                <h2 class="text-left">Application Specific</h2><br>
+            </div>
+            <div class="col-md-2">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown" aria-expanded="false">
+                        Select Application
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item">Chrome</a></li>
+                        <li><a class="dropdown-item">VS Code</a></li>
+                        <li><a class="dropdown-item">VLC</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Row Begin -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5 class="card-title">Memory Usage (Line Chart)</h5>
+                    <div style="display: block;">
+                        <canvas baseChart width="100" height="50" [datasets]="lineChartData" [labels]="lineChartLabels"
+                            [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+                            [chartType]="lineChartType" [plugins]="lineChartPlugins">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5 class="card-title">Disk Usage (BarChart)</h5>
+                    <div style="display: block;">
+                        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels"
+                            [options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend"
+                            [chartType]="barChartType">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row End -->
+        <br>
+        <!-- Row Begin -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5 class="card-title">Cpu Usage (Bubble Chart)</h5>
+                    <div style="display: block;">
+                        <canvas baseChart [datasets]="bubbleChartData" [options]="bubbleChartOptions"
+                            [legend]="bubbleChartLegend" [chartType]="bubbleChartType">
+                        </canvas>
+                    </div>
 
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5 class="card-title">Number of threads (Scatter Chart)</h5>
+                    <div style="display: block;">
+                        <canvas baseChart [datasets]="scatterChartData" [options]="scatterChartOptions"
+                            [chartType]="scatterChartType">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row End -->
+        <br>
+        <!-- <br><br><br> -->
     </div>
 </div>
